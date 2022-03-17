@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from "./js/Pages/Home";
+import MainLayout from "./js/Layouts/MainLayout";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+      <MainLayout>
+        <Home />
+      </MainLayout>
   </React.StrictMode>,
   document.getElementById('root')
 );

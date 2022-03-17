@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+// Utils
+@import "./utils/reset";
+@import "./utils/sizes";
+@import "./utils/mixins";
+
+// Components
+
+// Page
+@import "pages/home";
+
+
+// Layouts
+@import "./layouts/main-header";
+@import "./layouts/main-sidebar";
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F1F26;
+  font-weight: 400;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}

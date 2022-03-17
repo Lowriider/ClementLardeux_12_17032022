@@ -1,0 +1,25 @@
+.header-container {
+  display: flex;
+  padding: 19px 29px;
+  position: relative;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  img {
+    cursor: pointer;
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+    &:last-child {
+      margin-right: 87px;
+    }
+  }
+}

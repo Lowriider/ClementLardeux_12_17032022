@@ -1,0 +1,48 @@
+.side-bar-container {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  max-width: 117px;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 60px 27px;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .sport-icons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 180px;
+      .sport-icons {
+        align-items: center;
+        max-width: 64px;
+        background: #FFFFFF;
+        border-radius: 6px;
+        padding: 14px 14px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .copyright {
+      //position: relative;
+      //top: -60px;
+      width: 138px;
+      margin: 0 0 60px 0;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 24px;
+      color: #FFFFFF;
+      transform: rotate(-90deg);
+    }
+  }
+}
