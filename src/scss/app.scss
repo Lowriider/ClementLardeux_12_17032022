@@ -17,12 +17,16 @@
 
 html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #1F1F26;
   font-weight: 400;
+  height: 100%;
   *,
   *::before,
   *::after {
     box-sizing: border-box;
+  }
+  #root {
+    height: 100%;
   }
 }

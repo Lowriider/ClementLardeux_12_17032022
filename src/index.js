@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from "./js/Pages/Home";
 import MainLayout from "./js/Layouts/MainLayout";
+import GetUser from "./js/Data/GetUser";
 
 ReactDOM.render(
-  <React.StrictMode>
       <MainLayout>
-        <Home />
-      </MainLayout>
-  </React.StrictMode>,
+        <GetUser />
+      </MainLayout>,
   document.getElementById('root')
 );
 
