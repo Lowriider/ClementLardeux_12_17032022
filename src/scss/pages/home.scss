@@ -1,0 +1,130 @@
+.home-container {
+  margin: 68px 90px 86px 109px;
+  width: 100%;
+
+  .home-title {
+    margin-bottom: 77px;
+    div {
+      h2 {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 24px;
+      color: #000000;
+      margin-bottom: 41px;
+        span {
+          color:#FF0000;
+        ;
+        }
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #000000;
+    }
+  }
+
+  .stats-container {
+    display: flex;
+    width: 100%;
+
+    .global-activity {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      margin-right: 63px;
+
+      .daily-activity {
+        background: #FBFBFB;
+        height: 320px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+        border-radius: 5px;
+        margin-bottom: 30px;
+      }
+
+      .detailed-stats {
+        display: flex;
+        width: 100%;
+
+        .stat {
+          height: 263px;
+          width: calc(100% / 3);
+
+          border-radius: 5px;
+          background: #282D30;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+          margin-right: 30px;
+
+          &:first-child {
+            background: #FF0000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+            border-radius: 5px;
+          }
+
+          &:last-child {
+            background: #FBFBFB;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+            border-radius: 5px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .aside-stats {
+      max-width: 258px;
+      width: 100%;
+      .nutri-stat {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        background: #FBFBFB;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+        border-radius: 5px;
+        padding: 32px;
+        margin-bottom: 39px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .nutri-img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          background-color: #FBEAEA;
+          border-radius: 6px;
+          margin-right: 24px;
+        }
+          .blue-icon {
+            background-color: #E9F4FB;
+          }
+        .yellow-icon {
+background-color: #FAF6E5;
+        }
+        .pink-icon {
+          background-color: #FBEAE4;
+        }
+
+        .nutri-content {
+          p {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #282D30;
+            &:last-child {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 24px;
+              color: #74798C;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
