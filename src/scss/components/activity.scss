@@ -1,0 +1,53 @@
+.top-chart-container {
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    /* identical to box height, or 160% */
+
+
+    color: #20253A;
+  }
+  .legend-container {
+    display: flex;
+    width: 277px;
+
+    .legend {
+      display: flex;
+      align-items: center;
+
+      .legend-text {
+        color: #74798C;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      &:first-child {
+        margin-right: 32px;
+      }
+
+      .circle {
+        padding: 4px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+
+      .red {
+        background-color: #E60000;
+      }
+
+      .black {
+        background-color: #282D30;;
+      }
+    }
+  }
+
+}
