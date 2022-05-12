@@ -12,6 +12,7 @@ import {
     Legend,
     ResponsiveContainer,
 } from 'recharts';
+import PropTypes from "prop-types";
 
 
 const Activity = ({activities}) => {
@@ -63,7 +64,7 @@ const Activity = ({activities}) => {
                 return new Date(a) - new Date(b);
             })
         return arrayMinMaxDays
-     }
+    }
 
     /**
      * It takes the values of the calories property from the activities object, and then pushes the minimum value of the
@@ -94,18 +95,33 @@ const Activity = ({activities}) => {
                 <div className="top-chart-container">
                     <h2>Activité quotidienne</h2>
                     <div className="legend-container">
-                        <div className="legend"><span className="circle black"></span><span className="legend-text">Poids(kg)</span></div>
-                        <div className="legend"><span className="circle red"></span><span className="legend-text">Calories brûlées(kCal)</span></div>
+                        <div className="legend"><span className="circle black"></span><span
+                            className="legend-text">Poids(kg)</span></div>
+                        <div className="legend"><span className="circle red"></span><span className="legend-text">Calories brûlées(kCal)</span>
+                        </div>
                     </div>
                 </div>
             </>
         );
     }
 
-    // const CustomCursor = props => {
-    //     const { x, y, width, height, stroke } = props;
-    //     return <Rectangle fill="red" stroke="red" x={x} y={y} width={width} height={height} />;
-    // };
+    const CustomTooltip = ({ active, payload, label }) => {
+
+        if (active) {
+            return (
+                <div className="custom-tooltip">
+                    <p>{payload[0].value}kg</p>
+                    <p>{payload[1].value}kCal</p>
+                </div>
+            )
+        }
+        return null
+    }
+
+    CustomTooltip.propTypes = {
+        active: PropTypes.bool,
+        payload: PropTypes.array,
+    };
 
     const data = activities
 
@@ -125,13 +141,14 @@ const Activity = ({activities}) => {
                 barSize={7}
             >
                 <CartesianGrid strokeDasharray="3 3" vertical={false}/>
-                <XAxis dataKey={formatDates} domain={sortMinMaxDays()} tickLine={false} tickMargin={15} />
+                <XAxis dataKey={formatDates} domain={sortMinMaxDays()} tickLine={false} tickMargin={15}/>
                 <YAxis yAxisId="right" dataKey="kilogram" height={120} orientation="right" axisLine={false}
                        tickLine={false} tick={{strokeWidth: 20}} domain={getMinMaxWeight()} tickMargin={45}/>
                 <YAxis yAxisId="left" dataKey="calories" height={120} hide={true} orientation="left"/>
-                <Tooltip/>
+                <Tooltip content={CustomTooltip} wrapperStyle={{ top: -5, left: 7 }}/>
                 <Legend verticalAlign="top" iconType="circle" align="right"
-                        content={renderLegend} wrapperStyle={{lineHeight: '40px', paddingBottom: "64px", paddingTop: "24px"}}/>
+                        content={renderLegend}
+                        wrapperStyle={{lineHeight: '40px', paddingBottom: "64px", paddingTop: "24px"}}/>
                 <Bar dataKey="kilogram" yAxisId="right" fill="#282D30" radius={[20, 20, 0, 0]}/>
                 <Bar dataKey="calories" yAxisId="left" fill="#E60000" radius={[20, 20, 0, 0]}/>
             </BarChart>
