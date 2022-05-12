@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 const Perfomance = ({performances}) => {
-    const replaceData = () => {
+
+    const formatData = () => {
         Object.values(performances.kind).forEach((type, key) => {
             performances.data[key] = {
                 ...performances.data[key],
@@ -10,16 +11,15 @@ const Perfomance = ({performances}) => {
             }
 
         })
-        return performances.data
+        return performances.data.reverse()
     }
-
-    const data = replaceData();
 
     return (
         <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-                <PolarGrid/>
+            <RadarChart cx="50%" cy="50%"  outerRadius={window.innerWidth > 1340 ? "70%" : "60%"} data={formatData()}>
+                <PolarGrid radialLines={false}/>
                 <PolarAngleAxis dataKey="kind" stroke='white'
+
                                 tickLine={false}
                                 tick={{ fontSize: 11 }}/>
                 <Radar dataKey="value" stroke="#FF0101" fill="#FF0101" fillOpacity={0.7}/>
