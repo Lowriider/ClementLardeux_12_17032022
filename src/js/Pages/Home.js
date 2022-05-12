@@ -2,6 +2,7 @@ import "../../scss/app.scss"
 import React from "react";
 import Activity from "../Components/Activity";
 import Perfomance from "../Components/Perfomance";
+import AverageSession from "../Components/AverageSession";
 
 const Home = ({userData}) => {
     console.log(userData)
@@ -17,11 +18,24 @@ const Home = ({userData}) => {
             <div className="stats-container">
                 <div className="global-activity">
                     <div className="daily-activity">
-                        <Activity activities={userData.activity.sessions}/>
+                        {
+                            userData.activity.sessions &&
+                            <Activity activities={userData.activity.sessions}/>
+                        }
                     </div>
                     <div className="detailed-stats">
-                        <div className="stat">2</div>
-                        <div className="stat"><Perfomance performances={userData.performance}/></div>
+                        <div className="stat">
+                            {
+                                userData.sessions &&
+                                <AverageSession session={userData.sessions}/>
+                            }
+                        </div>
+                        <div className="stat">
+                            {
+                                userData.performance &&
+                                <Perfomance performances={userData.performance}/>
+                            }
+                        </div>
                         <div className="stat">4</div>
                     </div>
                 </div>
