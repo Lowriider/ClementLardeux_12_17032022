@@ -2,9 +2,6 @@ import React from 'react';
 import {
     BarChart,
     Bar,
-    Brush,
-    ReferenceLine,
-    Rectangle,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -16,14 +13,6 @@ import PropTypes from "prop-types";
 
 
 const Activity = ({activities}) => {
-
-    /**
-     * It returns the largest number in the array of objects
-     * @returns The maximum weight of all the activities.
-     */
-    const getMaxWeight = () => {
-        return activities.reduce((acc, activity) => acc = acc > activity.kilogram ? acc : activity.kilogram, 0);
-    }
 
     /**
      * It takes the values of the weight property of each object in the activities object and returns the minimum and
@@ -92,7 +81,7 @@ const Activity = ({activities}) => {
 
         return (
             <>
-                <div className="top-chart-container">
+                <div className="top-activity-legend-container">
                     <h2>Activité quotidienne</h2>
                     <div className="legend-container">
                         <div className="legend"><span className="circle black"></span><span
@@ -104,7 +93,6 @@ const Activity = ({activities}) => {
             </>
         );
     }
-
     const CustomTooltip = ({ active, payload, label }) => {
 
         if (active) {
@@ -123,14 +111,12 @@ const Activity = ({activities}) => {
         payload: PropTypes.array,
     };
 
-    const data = activities
-
     return (
         <ResponsiveContainer width="100%" height="95%">
             <BarChart
                 width={50}
                 height={200}
-                data={data}
+                data={activities}
                 margin={{
                     top: 8,
                     right: 30,
