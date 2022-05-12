@@ -49,5 +49,18 @@
       }
     }
   }
+}
 
+.custom-tooltip {
+  height: 72px;
+  width: 49px;
+  background-color: #e60000;
+  font-weight: 500;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
 }
