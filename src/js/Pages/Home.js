@@ -1,6 +1,7 @@
 import "../../scss/app.scss"
 import React from "react";
 import Activity from "../Components/Activity";
+import Perfomance from "../Components/Perfomance";
 
 const Home = ({userData}) => {
     console.log(userData)
@@ -20,7 +21,7 @@ const Home = ({userData}) => {
                     </div>
                     <div className="detailed-stats">
                         <div className="stat">2</div>
-                        <div className="stat">3</div>
+                        <div className="stat"><Perfomance performances={userData.performance}/></div>
                         <div className="stat">4</div>
                     </div>
                 </div>
