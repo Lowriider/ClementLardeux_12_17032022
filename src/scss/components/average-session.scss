@@ -1,0 +1,25 @@
+
+.average-session-tooltip {
+  font-weight: 500;
+  font-size: 10px;
+  color: black;
+  line-height: 24px;
+  background-color: white;
+  padding: 1px 7px;
+}
+
+
+.top-session-legend-container {
+  position: absolute;
+  margin: 20px 34px;
+  width: 147px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
