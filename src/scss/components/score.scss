@@ -1,0 +1,30 @@
+.score-title {
+  position: relative;
+  width: 42px;
+  color: #20253A;
+  font-size: 15px;
+  font-weight: bold;
+  top: 24px;
+  left: 30px;
+}
+.score-legend-container {
+
+  display: flex;
+  justify-content: center;
+
+  .score-text {
+    p {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bolder;
+      color: black;
+    }
+    span {
+      font-size: 16px;
+        top: 20px!important;
+        line-height: 24px;
+        font-weight: 500;
+        color: #74798C;
+    }
+  }
+}
