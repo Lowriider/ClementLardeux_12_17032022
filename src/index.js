@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainLayout from "./js/Layouts/MainLayout";
-import GetUser from "./js/Data/GetUser";
+import Router from "./routage/Router";
 
 ReactDOM.render(
-      <MainLayout>
-        <GetUser />
-      </MainLayout>,
+     <Router/>,
   document.getElementById('root')
 );
 
