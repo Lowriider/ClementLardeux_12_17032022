@@ -1,0 +1,19 @@
+.view--not-found {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  .not-found--container {
+    margin: auto;
+    p {
+      margin-top: 66px;
+      width: 100%;
+      font-style: normal;
+      text-align: center;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 142.6%;
+      color: #FF6060;
+    }
+  }
+}
