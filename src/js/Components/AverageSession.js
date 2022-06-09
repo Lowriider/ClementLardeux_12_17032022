@@ -13,8 +13,8 @@ const AverageSession = ({session}) => {
         let arrayMinMaxLength = [];
         let arrayOfLength = Object.values(session.sessions).map(({sessionLength}) => sessionLength)
 
-        arrayMinMaxLength.push(Math.min(...arrayOfLength) - 10)
-        arrayMinMaxLength.push(Math.max(...arrayOfLength) + 20)
+        arrayMinMaxLength.push(Math.min(...arrayOfLength) - 20)
+        arrayMinMaxLength.push(Math.max(...arrayOfLength) + 30)
 
         return arrayMinMaxLength
     }
@@ -85,7 +85,7 @@ const AverageSession = ({session}) => {
                 <XAxis dataKey="day" axisLine={false} tickLine={false} minTickGap={3}
                        padding={{left: 10, right: 10}}/>
                 <YAxis hide={true} domain={getMinMaxLength}/>
-                <Tooltip content={<CustomTooltip/>} cursor={{stroke: 'rgba(255,255,255,0.1)', strokeWidth: 50}}
+                <Tooltip content={<CustomTooltip/>} cursor={{stroke: 'rgba(0,0,0,0.1)', strokeWidth: 50}}
                          viewBox={{
                              x: 0,
                              y: 0,
