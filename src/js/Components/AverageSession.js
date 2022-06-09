@@ -82,7 +82,7 @@ const AverageSession = ({session}) => {
                         <stop offset="100%" stopColor="#FFFFFF" stopOpacity={1}/>
                     </linearGradient>
                 </defs>
-                <XAxis dataKey="day" axisLine={false} tickLine={false} minTickGap={3}
+                <XAxis dataKey="day" axisLine={false} tick={{fill : '#FFFFFF', opacity: 0.5}} tickLine={false} minTickGap={3}
                        padding={{left: 10, right: 10}}/>
                 <YAxis hide={true} domain={getMinMaxLength}/>
                 <Tooltip content={<CustomTooltip/>} cursor={{stroke: 'rgba(0,0,0,0.1)', strokeWidth: 50}}
