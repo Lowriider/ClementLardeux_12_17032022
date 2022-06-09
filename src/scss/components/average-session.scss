@@ -8,12 +8,13 @@
   padding: 1px 7px;
 }
 
-
 .top-session-legend-container {
   position: absolute;
   margin: 20px 34px;
   width: 147px;
-
+  @include desktop {
+    margin: 0;
+  }
   h2 {
     font-weight: 500;
     font-size: 15px;
