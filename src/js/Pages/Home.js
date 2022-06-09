@@ -3,9 +3,10 @@ import React from "react";
 import Activity from "../Components/Activity";
 import Perfomance from "../Components/Perfomance";
 import AverageSession from "../Components/AverageSession";
+import Score from "../Components/Score";
 
 const Home = ({userData}) => {
-    console.log(userData)
+
     return (
         <div className="home-container">
             <div className="home-title ">
@@ -36,7 +37,7 @@ const Home = ({userData}) => {
                                 <Perfomance performances={userData.performance}/>
                             }
                         </div>
-                        <div className="stat">4</div>
+                        <div className="stat"><Score score={userData.infos.todayScore === undefined ? userData.infos.score * 100 : userData.infos.todayScore * 100}/></div>
                     </div>
                 </div>
                 <aside className="aside-stats">
