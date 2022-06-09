@@ -3,6 +3,7 @@ import {PieChart, Pie, Label, Cell, ResponsiveContainer, Legend} from 'recharts'
 
 const Score = ({score}) => {
 
+    /* Creating an array of objects with the name, value and fillColor of the pie chart. */
     const data = [
         {
             name: "completed",
@@ -14,13 +15,21 @@ const Score = ({score}) => {
             value: 100 - score,
             fillColor: "#FBFBFB",
         }
-    ]
-    const EXAMPLE_DATA = [
+    ];
+
+    /* Used to render the white circle in the middle of the pie chart. */
+    const fakeData = [
         {
             name: 'example1',
             value: 100,
         },
     ];
+
+    /**
+     * It renders a div with a score and a text
+     * @param props - the props passed to the component
+     * @returns A function that returns a div with a score text div inside.
+     */
     const renderLegend = (props) => {
         const {payload} = props;
 
@@ -42,7 +51,7 @@ const Score = ({score}) => {
             <h2 className="score-title">Score</h2>
             <ResponsiveContainer width="100%" height="100%">
                 <PieChart width={500} height={500}>
-                    <Pie data={EXAMPLE_DATA} dataKey="value" outerRadius={70} fill="#FFFFFF" isAnimationActive={false}/>
+                    <Pie data={fakeData} dataKey="value" outerRadius={70} fill="#FFFFFF" isAnimationActive={false}/>
                     <Pie data={data} dataKey="value" innerRadius={70}
                          outerRadius={80}
                          startAngle={90}

@@ -93,8 +93,12 @@ const Activity = ({activities}) => {
             </>
         );
     }
-    const CustomTooltip = ({ active, payload, label }) => {
 
+    /**
+     * If the tooltip is active, return a div with the payload values, otherwise return null
+     * @returns A custom tooltip that displays the value of the payload.
+     */
+    const CustomTooltip = ({ active, payload, label }) => {
         if (active) {
             return (
                 <div className="custom-tooltip">

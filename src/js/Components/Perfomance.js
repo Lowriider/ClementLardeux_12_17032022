@@ -3,6 +3,11 @@ import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, 
 
 const Perfomance = ({performances}) => {
 
+    /**
+     * It takes the data from the performances object, and adds a new key called kind, which is the first letter of the
+     * value of the key kind, capitalized, and then the rest of the value of the key kind
+     * @returns The data is being returned in reverse order.
+     */
     const formatData = () => {
         Object.values(performances.kind).forEach((type, key) => {
             performances.data[key] = {
