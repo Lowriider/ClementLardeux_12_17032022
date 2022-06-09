@@ -1,10 +1,20 @@
 .home-container {
-  margin: 68px 90px 86px 109px;
+  margin: 0 auto 0 109px;
+  max-width: 1124px;
   width: 100%;
+  @include desktop {
+    margin: 0 auto 0 7%;
+    max-width: 820px;
+    width: 100%;
+  }
 
   .home-title {
+    margin-top: 68px;
     margin-bottom: 77px;
 
+    @include desktop {
+      margin-bottom: 50px;
+    }
     div {
       h2 {
         font-weight: 500;
@@ -31,12 +41,20 @@
     display: flex;
     width: 100%;
 
+    @include desktop {
+      flex-wrap: wrap-reverse;
+    }
+
     .global-activity {
       display: flex;
       width: 100%;
+      max-width: 835px;
       flex-direction: column;
       margin-right: 63px;
-
+      @include desktop {
+        margin-right: 0;
+        max-width: unset;
+      }
       .daily-activity {
         background: #FBFBFB;
         height: 320px;
@@ -62,6 +80,24 @@
             background: #FF0000;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
             border-radius: 5px;
+
+            ul {
+              position: relative;
+              top: -28px;
+              display: flex;
+
+              li {
+                &:first-child {
+                  margin-left: 10px;
+                }
+
+                &:last-child {
+                  margin-right: 10px;
+                }
+
+                margin-right: 36px;
+              }
+            }
           }
 
           &:last-child {
@@ -78,6 +114,12 @@
       max-width: 258px;
       width: 100%;
 
+      @include desktop {
+        display: flex;
+        justify-content: space-around;
+        max-width: unset;
+      }
+
       .nutri-stat {
         width: 100%;
         height: fit-content;
@@ -91,6 +133,19 @@
 
         &:last-child {
           margin-bottom: 0;
+        }
+
+        @include desktop {
+          max-width: 100%;
+          width: calc(100% / 4);
+          justify-content: space-around;
+          padding: 24px;
+          &:first-child {
+            width: 220px;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
         }
 
         .nutri-img {
@@ -131,12 +186,7 @@
             }
           }
         }
-
       }
     }
   }
-}
-
-.line {
-    background-color: linear-gradient(180 deg, #FFFFFF 0%, rgba(255, 255, 255, 0.106534) 100%)
 }

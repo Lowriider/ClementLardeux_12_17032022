@@ -6,10 +6,12 @@
 @import "./utils/mixins";
 
 // Components
-@import "./components/activity.scss";
-@import "./components/average-session.scss";
+@import "./components/activity";
+@import "./components/average-session";
+@import "./components/score";
 // Page
 @import "pages/home";
+@import "pages/not-found";
 
 
 // Layouts
