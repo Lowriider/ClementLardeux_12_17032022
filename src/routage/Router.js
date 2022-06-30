@@ -13,6 +13,8 @@ const Router = () => {
             <MainLayout>
                 <Routes>
                     <Route path="/user/:userId" element={<GetUser/>}/>
+                    <Route path="/404" element={<NotFound/>}/>
+
                     <Route
                         path="*"
                         element={<NotFound/>}

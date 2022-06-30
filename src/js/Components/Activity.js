@@ -11,13 +11,13 @@ import {
 } from 'recharts';
 import PropTypes from "prop-types";
 
-
 const Activity = ({activities}) => {
 
+
     /**
-     * It takes the values of the weight property of each object in the activities object and returns the minimum and
-     * maximum values of the array
-     * @returns An array with the minimum and maximum weight of the activities.
+     * It takes the values of the 'kilogram' property of the activities object and returns the minimum and maximum values
+     * of the array
+     * @returns An array of two numbers.
      */
     const getMinMaxWeight = () => {
 
@@ -42,6 +42,7 @@ const Activity = ({activities}) => {
             return parseInt(date[2])
         })
     }
+
     /**
      * It takes the array of dates, formats them, and then sorts them from earliest to latest
      * @returns An array of the dates in the format of "YYYY-MM-DD"

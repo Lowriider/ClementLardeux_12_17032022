@@ -24,7 +24,6 @@ const Perfomance = ({performances}) => {
             <RadarChart cx="50%" cy="50%"  outerRadius={window.innerWidth > 1340 ? "70%" : "60%"} data={formatData()}>
                 <PolarGrid radialLines={false}/>
                 <PolarAngleAxis dataKey="kind" stroke='white'
-
                                 tickLine={false}
                                 tick={{ fontSize: 11 }}/>
                 <Radar dataKey="value" stroke="#FF0101" fill="#FF0101" fillOpacity={0.7}/>
